@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  import button from "$lib/button.module.css";
+
+  button.danger; // No intellisense here
+  button.nonExisting;
+</script>
+
+<!-- No autocompletion here -->
+<button class={button.danger}>Danger</button>
+<button class={button.primary}>Primary</button>
